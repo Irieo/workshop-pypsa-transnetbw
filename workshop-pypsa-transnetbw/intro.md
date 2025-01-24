@@ -2,19 +2,12 @@
 
 Hosted by TransnetBW, January 2025
 
-### Acknowledgements
-
-We acknowledge support from the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A (RESILIENT) jointly with the [CETPartnership](https://cetpartnership.eu/) through the Joint Call 2022.
-
-More about the RESILIENT project: https://resilient-project.github.io/
-
-
 ## Google Colab
 
 You can work with the workshop materials without a local Python installation using online service [Google Colab](https://colab.google) which provides an online Python environment. This requires a Google account.
 
 Open any jupyter notebook and click on the rocket 🚀 in the top right corner. It will launch a Colab workspace in your browser and automatically installs [the python environment for this course](
-https://github.com/Irieo/workshop-pypsa-transnetbw/blob/main/requirements.txt). 
+https://github.com/Irieo/workshop-pypsa-transnetbw/blob/main/requirements.txt).
 
 If that does not work download the `.ipynb` file and import it in [Google Colab](https://colab.research.google.com/)
 
@@ -93,3 +86,9 @@ you can install the required packages with
 This should allow you to start a new Jupyter window:
 
     jupyter lab
+
+### Acknowledgements
+
+We acknowledge support from the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A (RESILIENT) jointly with the [CETPartnership](https://cetpartnership.eu/) through the Joint Call 2022.
+
+More about the RESILIENT project: https://resilient-project.github.io/

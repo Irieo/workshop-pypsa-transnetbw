@@ -4,5 +4,5 @@
 format: jb-book
 root: intro
 chapters:
-- file: 01-workshop-python
-
+- file: 01-annex-python
+- file: 02-annex-pandas
