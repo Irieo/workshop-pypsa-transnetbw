@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to the PyPSA workshop at TransnetBW &#8212; PyPSA workshop at TransnetBW</title>
+    <title>Welcome to the PyPSA workshop &#8212; PyPSA workshop at TransnetBW</title>
   
   
   
@@ -160,7 +160,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to the PyPSA workshop at TransnetBW
+                    Welcome to the PyPSA workshop
                 </a>
             </li>
         </ul>
@@ -348,7 +348,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to the PyPSA workshop at TransnetBW</h1>
+    <h1>Welcome to the PyPSA workshop</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -358,13 +358,16 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-for-energy-system-modelling">Using Python for Energy System Modelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-colab">Google Colab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-your-python-environment-locally">Setting up your Python environment locally</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">Anaconda</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lightweight-miniconda">Lightweight <code class="docutils literal notranslate"><span class="pre">miniconda</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-colab">Google Colab</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments-with-conda">Managing environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments-with-conda">Managing environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-use-lightweight-miniconda">Tip: use lightweight <code class="docutils literal notranslate"><span class="pre">miniconda</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-for-this-course-workshop">Environment for this course: <code class="docutils literal notranslate"><span class="pre">workshop</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-conda-recommended">… with <code class="docutils literal notranslate"><span class="pre">conda</span></code> (recommended)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-pip">… with <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
@@ -381,10 +384,22 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-pypsa-workshop-at-transnetbw">
-<h1>Welcome to the PyPSA workshop at TransnetBW<a class="headerlink" href="#welcome-to-the-pypsa-workshop-at-transnetbw" title="Link to this heading">#</a></h1>
-<section id="using-python-for-energy-system-modelling">
-<h2>Using Python for Energy System Modelling<a class="headerlink" href="#using-python-for-energy-system-modelling" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-pypsa-workshop">
+<h1>Welcome to the PyPSA workshop<a class="headerlink" href="#welcome-to-the-pypsa-workshop" title="Link to this heading">#</a></h1>
+<p>Hosted by TransnetBW, January 2025</p>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
+<p>We acknowledge support from the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A (RESILIENT) jointly with the <a class="reference external" href="https://cetpartnership.eu/">CETPartnership</a> through the Joint Call 2022.</p>
+<p>More about the RESILIENT project: <a class="reference external" href="https://resilient-project.github.io/">https://resilient-project.github.io/</a></p>
+</section>
+<section id="google-colab">
+<h2>Google Colab<a class="headerlink" href="#google-colab" title="Link to this heading">#</a></h2>
+<p>You can work with the workshop materials without a local Python installation using online service <a class="reference external" href="https://colab.google">Google Colab</a> which provides an online Python environment. This requires a Google account.</p>
+<p>Open any jupyter notebook and click on the rocket 🚀 in the top right corner. It will launch a Colab workspace in your browser and automatically installs <a class="reference external" href="https://github.com/Irieo/workshop-pypsa-transnetbw/blob/main/requirements.txt">the python environment for this course</a>.</p>
+<p>If that does not work download the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file and import it in <a class="reference external" href="https://colab.research.google.com/">Google Colab</a></p>
+</section>
+<section id="setting-up-your-python-environment-locally">
+<h2>Setting up your Python environment locally<a class="headerlink" href="#setting-up-your-python-environment-locally" title="Link to this heading">#</a></h2>
 <section id="anaconda">
 <h3>Anaconda<a class="headerlink" href="#anaconda" title="Link to this heading">#</a></h3>
 <p>Coordinating the compatibility between different Python software packages and
@@ -400,70 +415,18 @@ desktop application. Instructions for this are given on the <a class="reference 
 Website</a>.
 From the Anaconda Prompt, you should be able to run <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
 </section>
-<section id="lightweight-miniconda">
-<h3>Lightweight <code class="docutils literal notranslate"><span class="pre">miniconda</span></code><a class="headerlink" href="#lightweight-miniconda" title="Link to this heading">#</a></h3>
-<p>If you don’t want the full Anaconda Python Distribution, there is a lightweight
-alternative installation called
-<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html"><code class="docutils literal notranslate"><span class="pre">miniconda</span></code></a>.</p>
-</section>
-<section id="google-colab">
-<h3>Google Colab<a class="headerlink" href="#google-colab" title="Link to this heading">#</a></h3>
-<p>You can even do the course without a local Python installation using online
-services like <a class="reference external" href="https://colab.google">Google Colab (colab.google)</a> which provide
-an online Python environment. This requires a Google account.</p>
-</section>
 </section>
 <section id="managing-environments-with-conda">
 <h2>Managing environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#managing-environments-with-conda" title="Link to this heading">#</a></h2>
 <p>Python coupled with a package manager provides a way to make isolated,
 reproducible <em>environments</em> where you have control over all installed packages
 and configurations.</p>
-<p>First, check that you have access to <code class="docutils literal notranslate"><span class="pre">conda</span></code> in your <em>terminal</em> or <em>Anaconda Prompt</em> application by typing:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda --version
-</pre></div>
-</div>
-<p>To create a conda environment, you execute the following command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda create --name my_environment python=3.11 numpy
-</pre></div>
-</div>
-<p>To use this environment, simply <em>activate</em> it by executing:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda activate my_environment
-</pre></div>
-</div>
-<p>You should now see the string <code class="docutils literal notranslate"><span class="pre">(my_environment)</span></code> prepended to your prompt.
-Now, any execution of Python will use the packages installed in your <em>environment</em> “my_environment”.</p>
-<p>To install additional packages into your environment:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda install &lt;package-name&gt;
-</pre></div>
-</div>
-<p>Some packages are community-maintained (e.g. <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>) and require you to specify a different “channel”, i.e. a different source:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge &lt;package-name&gt;
-</pre></div>
-</div>
-<p>You can deactivate your environment by typing:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda deactivate
-</pre></div>
-</div>
-<p>To see all the environments on your system:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda env list
-</pre></div>
-</div>
-<p>To get a complete summary of all the packages installed in your environment, run</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda list
-</pre></div>
-</div>
-<p>If you want to permanently remove an environment and delete all the data
-associated with it:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda env remove --name my_environment --all
-</pre></div>
-</div>
-<p>A conda environment can also be defined through an <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> file. With that file, a new environment with the exact
-configuration can be installed by executing</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda env create -f my_environment.yml
-</pre></div>
-</div>
-<p>For extensive documentation on using environments, please see
-<a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">the conda documentation</a>.</p>
+<p>Here is <a class="reference external" href="https://towardsdatascience.com/conda-essential-concepts-and-tricks-e478ed53b5b">a great short article</a> that contains all the essential concepts and tips about using <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
+<section id="tip-use-lightweight-miniconda">
+<h3>Tip: use lightweight <code class="docutils literal notranslate"><span class="pre">miniconda</span></code><a class="headerlink" href="#tip-use-lightweight-miniconda" title="Link to this heading">#</a></h3>
+<p>Do yourself a favor — use a lightweight installation called
+<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html"><code class="docutils literal notranslate"><span class="pre">miniconda</span></code></a>. It is very likely that you don’t want the full Anaconda Python Distribution.</p>
+</section>
 </section>
 <section id="environment-for-this-course-workshop">
 <h2>Environment for this course: <code class="docutils literal notranslate"><span class="pre">workshop</span></code><a class="headerlink" href="#environment-for-this-course-workshop" title="Link to this heading">#</a></h2>
@@ -481,7 +444,6 @@ you can reate this environment using <code class="docutils literal notranslate">
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda activate workshop
 </pre></div>
 </div>
-<p>This environment should be sufficient for all of your work in this course.</p>
 <p>The environment has to be activated whenever you open a new terminal,
 <em>before</em> starting a new Jupyter window with</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter lab
@@ -564,13 +526,16 @@ you can install the required packages with</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-python-for-energy-system-modelling">Using Python for Energy System Modelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-colab">Google Colab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-your-python-environment-locally">Setting up your Python environment locally</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">Anaconda</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lightweight-miniconda">Lightweight <code class="docutils literal notranslate"><span class="pre">miniconda</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-colab">Google Colab</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments-with-conda">Managing environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments-with-conda">Managing environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-use-lightweight-miniconda">Tip: use lightweight <code class="docutils literal notranslate"><span class="pre">miniconda</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-for-this-course-workshop">Environment for this course: <code class="docutils literal notranslate"><span class="pre">workshop</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-conda-recommended">… with <code class="docutils literal notranslate"><span class="pre">conda</span></code> (recommended)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-pip">… with <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
