@@ -64,7 +64,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to the basics of Python" href="01-workshop-python.html" />
+    <link rel="next" title="Introduction to the basics of Python" href="01-annex-python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,7 +165,8 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-workshop-python.html">Introduction to the basics of <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-annex-python.html">Introduction to the basics of <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-annex-pandas.html">Tabular data analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 </ul>
 
     </div>
@@ -358,7 +359,6 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-colab">Google Colab</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-your-python-environment-locally">Setting up your Python environment locally</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">Anaconda</a></li>
@@ -371,6 +371,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-for-this-course-workshop">Environment for this course: <code class="docutils literal notranslate"><span class="pre">workshop</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-conda-recommended">… with <code class="docutils literal notranslate"><span class="pre">conda</span></code> (recommended)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-pip">… with <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
@@ -387,11 +388,6 @@
   <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-pypsa-workshop">
 <h1>Welcome to the PyPSA workshop<a class="headerlink" href="#welcome-to-the-pypsa-workshop" title="Link to this heading">#</a></h1>
 <p>Hosted by TransnetBW, January 2025</p>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
-<p>We acknowledge support from the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A (RESILIENT) jointly with the <a class="reference external" href="https://cetpartnership.eu/">CETPartnership</a> through the Joint Call 2022.</p>
-<p>More about the RESILIENT project: <a class="reference external" href="https://resilient-project.github.io/">https://resilient-project.github.io/</a></p>
-</section>
 <section id="google-colab">
 <h2>Google Colab<a class="headerlink" href="#google-colab" title="Link to this heading">#</a></h2>
 <p>You can work with the workshop materials without a local Python installation using online service <a class="reference external" href="https://colab.google">Google Colab</a> which provides an online Python environment. This requires a Google account.</p>
@@ -465,6 +461,11 @@ you can install the required packages with</p>
 </pre></div>
 </div>
 </section>
+<section id="acknowledgements">
+<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h3>
+<p>We acknowledge support from the German Federal Ministry for Economic Affairs and Climate Action (BMWK) under Grant No. 03EI4083A (RESILIENT) jointly with the <a class="reference external" href="https://cetpartnership.eu/">CETPartnership</a> through the Joint Call 2022.</p>
+<p>More about the RESILIENT project: <a class="reference external" href="https://resilient-project.github.io/">https://resilient-project.github.io/</a></p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -501,7 +502,7 @@ you can install the required packages with</p>
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="01-workshop-python.html"
+       href="01-annex-python.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -526,7 +527,6 @@ you can install the required packages with</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-colab">Google Colab</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-your-python-environment-locally">Setting up your Python environment locally</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda">Anaconda</a></li>
@@ -539,6 +539,7 @@ you can install the required packages with</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-for-this-course-workshop">Environment for this course: <code class="docutils literal notranslate"><span class="pre">workshop</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-conda-recommended">… with <code class="docutils literal notranslate"><span class="pre">conda</span></code> (recommended)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-pip">… with <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </li>
 </ul>
