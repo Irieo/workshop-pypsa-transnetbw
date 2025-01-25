@@ -6,8 +6,7 @@ Hosted by TransnetBW, January 2025
 
 You can work with the workshop materials without a local Python installation using online service [Google Colab](https://colab.google) which provides an online Python environment. This requires a Google account.
 
-Open any jupyter notebook and click on the rocket 🚀 in the top right corner. It will launch a Colab workspace in your browser and automatically installs [the python environment for this course](
-https://github.com/Irieo/workshop-pypsa-transnetbw/blob/main/requirements.txt).
+Open any jupyter notebook and click on the rocket 🚀 in the top right corner. It will launch a Colab workspace in your browser with the jupyter notebook loaded.
 
 If that does not work download the `.ipynb` file and import it in [Google Colab](https://colab.research.google.com/)
 
