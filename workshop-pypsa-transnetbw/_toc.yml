@@ -6,3 +6,4 @@ root: intro
 chapters:
 - file: 01-annex-python
 - file: 02-annex-pandas
+- file: 03-workshop-pypsa-dispatch-a
