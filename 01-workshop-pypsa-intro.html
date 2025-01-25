@@ -62,11 +62,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '03-workshop-pypsa-dispatch-a';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01-workshop-pypsa-intro';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Tabular data analysis with pandas" href="02-annex-pandas.html" />
+    <link rel="next" title="Introduction to pypsa: some more fun dispatch problems and more PyPSA features" href="02-workshop-pypsa-more-features.html" />
+    <link rel="prev" title="Welcome to the PyPSA workshop" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,9 +166,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-annex-python.html">Introduction to the basics of <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="02-annex-pandas.html">Tabular data analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: a simple dispatch problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-workshop-pypsa-more-features.html">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: some more fun dispatch problems and more PyPSA features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annex-python.html">Introduction to the basics of <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="annex-pandas.html">Tabular data analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 </ul>
 
     </div>
@@ -227,7 +229,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/Irieo/workshop-pypsa-transnetbw/blob/main/workshop-pypsa-transnetbw/03-workshop-pypsa-dispatch-a.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/Irieo/workshop-pypsa-transnetbw/blob/main/workshop-pypsa-transnetbw/01-workshop-pypsa-intro.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +277,7 @@
       
       
       
-      <li><a href="https://github.com/Irieo/workshop-pypsa-transnetbw/issues/new?title=Issue%20on%20page%20%2F03-workshop-pypsa-dispatch-a.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Irieo/workshop-pypsa-transnetbw/issues/new?title=Issue%20on%20page%20%2F01-workshop-pypsa-intro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -305,7 +307,7 @@
       
       
       
-      <li><a href="_sources/03-workshop-pypsa-dispatch-a.ipynb" target="_blank"
+      <li><a href="_sources/01-workshop-pypsa-intro.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -877,13 +879,13 @@ Snapshots: 1
 <h2>Optimisation<a class="headerlink" href="#optimisation" title="Link to this heading">#</a></h2>
 <p>The design principle of PyPSA is that basically each component is associated with a set of variables and constraints that will be added to the optimisation model based on the input data stored for the components.</p>
 <p>For this dispatch problem, PyPSA will solve an optimisation problem that looks like this</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3aac4d90-9a20-4af1-9baf-110103ce79b9">
-<span class="eqno">(1)<a class="headerlink" href="#equation-3aac4d90-9a20-4af1-9baf-110103ce79b9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-235c0356-1986-4e46-9524-965791824e84">
+<span class="eqno">(1)<a class="headerlink" href="#equation-235c0356-1986-4e46-9524-965791824e84" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \min_{g_{s,t};} \sum_{t,s} o_{s} g_{s,t}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b8d417df-a15b-4cae-a5af-82c215cb1bd6">
-<span class="eqno">(2)<a class="headerlink" href="#equation-b8d417df-a15b-4cae-a5af-82c215cb1bd6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a86e6ac8-9f4c-4340-b6b3-e539f73ab525">
+<span class="eqno">(2)<a class="headerlink" href="#equation-a86e6ac8-9f4c-4340-b6b3-e539f73ab525" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp; \leq g_{s,t} \leq G_{s}  &amp; \text{generation limits : generator} \\
 D_t &amp;= \sum_s g_{s,t} &amp; \text{market clearing : bus} \\
 \end{align}\]</div>
@@ -943,12 +945,12 @@ Presolving model
 0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-5); columns 0(-2); elements 0(-6) - Reduced to empty
 Solving the original LP from the solution after postsolve
-Model name          : linopy-problem-w9yc0z9h
+Model name          : linopy-problem-xs9g5vbr
 Model status        : Optimal
 Objective value     :  2.4000000000e+03
 Relative P-D gap    :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-kn_fqrmd.sol
+Writing the solution to /tmp/linopy-solve-lxpnyq5w.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1414,12 +1416,12 @@ Presolving model
 0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-5); columns 0(-2); elements 0(-6) - Reduced to empty
 Solving the original LP from the solution after postsolve
-Model name          : linopy-problem-ogkwwv31
+Model name          : linopy-problem-p0w_i20f
 Model status        : Optimal
 Objective value     :  2.4000000000e+03
 Relative P-D gap    :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-xfbrleev.sol
+Writing the solution to /tmp/linopy-solve-3qg_m878.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1506,13 +1508,22 @@ Writing the solution to /tmp/linopy-solve-xfbrleev.sol
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02-annex-pandas.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tabular data analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
+        <p class="prev-next-title">Welcome to the PyPSA workshop</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="02-workshop-pypsa-more-features.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: some more fun dispatch problems and more PyPSA features</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
