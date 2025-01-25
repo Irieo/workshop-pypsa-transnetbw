@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to pypsa: a simple dispatch problem &#8212; PyPSA workshop at TransnetBW</title>
+    <title>Introduction to pypsa and linopy: a simple dispatch problem &#8212; PyPSA workshop at TransnetBW</title>
   
   
   
@@ -66,7 +66,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to pypsa: some more fun dispatch problems and more PyPSA features" href="02-workshop-pypsa-more-features.html" />
+    <link rel="next" title="More pypsa features: a bit more complex dispatch problems" href="02-workshop-pypsa-more-features.html" />
     <link rel="prev" title="Welcome to the PyPSA workshop" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -166,8 +166,8 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: a simple dispatch problem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02-workshop-pypsa-more-features.html">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: some more fun dispatch problems and more PyPSA features</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code> and <code class="docutils literal notranslate"><span class="pre">linopy</span></code>: a simple dispatch problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-workshop-pypsa-more-features.html">More <code class="docutils literal notranslate"><span class="pre">pypsa</span></code> features: a bit more complex dispatch problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="annex-python.html">Introduction to the basics of <code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="annex-pandas.html">Tabular data analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 </ul>
@@ -383,7 +383,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to pypsa: a simple dispatch problem</h1>
+    <h1>Introduction to pypsa and linopy: a simple dispatch problem</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,8 +416,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-pypsa-a-simple-dispatch-problem">
-<h1>Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: a simple dispatch problem<a class="headerlink" href="#introduction-to-pypsa-a-simple-dispatch-problem" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-pypsa-and-linopy-a-simple-dispatch-problem">
+<h1>Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code> and <code class="docutils literal notranslate"><span class="pre">linopy</span></code>: a simple dispatch problem<a class="headerlink" href="#introduction-to-pypsa-and-linopy-a-simple-dispatch-problem" title="Link to this heading">#</a></h1>
 <img src="https://github.com/fneum/data-science-for-esm/raw/main/data-science-for-esm/pypsa-logo.png" width="300px" />
 <p>PyPSA stands for <strong>Python for Power System Analysis</strong>.</p>
 <p>PyPSA is an open source Python package for simulating and optimising modern energy systems that include features such as</p>
@@ -879,13 +879,13 @@ Snapshots: 1
 <h2>Optimisation<a class="headerlink" href="#optimisation" title="Link to this heading">#</a></h2>
 <p>The design principle of PyPSA is that basically each component is associated with a set of variables and constraints that will be added to the optimisation model based on the input data stored for the components.</p>
 <p>For this dispatch problem, PyPSA will solve an optimisation problem that looks like this</p>
-<div class="amsmath math notranslate nohighlight" id="equation-235c0356-1986-4e46-9524-965791824e84">
-<span class="eqno">(1)<a class="headerlink" href="#equation-235c0356-1986-4e46-9524-965791824e84" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2f534e09-1d45-4f1d-8b78-30cd45eb512d">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2f534e09-1d45-4f1d-8b78-30cd45eb512d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \min_{g_{s,t};} \sum_{t,s} o_{s} g_{s,t}
 \end{equation}\]</div>
 <p>such that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a86e6ac8-9f4c-4340-b6b3-e539f73ab525">
-<span class="eqno">(2)<a class="headerlink" href="#equation-a86e6ac8-9f4c-4340-b6b3-e539f73ab525" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5531c292-7533-4620-8d99-b9590138917d">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5531c292-7533-4620-8d99-b9590138917d" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp; \leq g_{s,t} \leq G_{s}  &amp; \text{generation limits : generator} \\
 D_t &amp;= \sum_s g_{s,t} &amp; \text{market clearing : bus} \\
 \end{align}\]</div>
@@ -945,12 +945,12 @@ Presolving model
 0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-5); columns 0(-2); elements 0(-6) - Reduced to empty
 Solving the original LP from the solution after postsolve
-Model name          : linopy-problem-xs9g5vbr
+Model name          : linopy-problem-oo2idz9t
 Model status        : Optimal
 Objective value     :  2.4000000000e+03
 Relative P-D gap    :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-lxpnyq5w.sol
+Writing the solution to /tmp/linopy-solve-j_oamtzn.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1416,12 +1416,12 @@ Presolving model
 0 rows, 0 cols, 0 nonzeros  0s
 Presolve : Reductions: rows 0(-5); columns 0(-2); elements 0(-6) - Reduced to empty
 Solving the original LP from the solution after postsolve
-Model name          : linopy-problem-p0w_i20f
+Model name          : linopy-problem-i327ni5s
 Model status        : Optimal
 Objective value     :  2.4000000000e+03
 Relative P-D gap    :  0.0000000000e+00
 HiGHS run time      :          0.00
-Writing the solution to /tmp/linopy-solve-3qg_m878.sol
+Writing the solution to /tmp/linopy-solve-ejbt1wzy.sol
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;ok&#39;, &#39;optimal&#39;)
@@ -1521,7 +1521,7 @@ Writing the solution to /tmp/linopy-solve-3qg_m878.sol
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to <code class="docutils literal notranslate"><span class="pre">pypsa</span></code>: some more fun dispatch problems and more PyPSA features</p>
+        <p class="prev-next-title">More <code class="docutils literal notranslate"><span class="pre">pypsa</span></code> features: a bit more complex dispatch problems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
