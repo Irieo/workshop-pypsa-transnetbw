@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: 01-annex-python
-- file: 02-annex-pandas
-- file: 03-workshop-pypsa-dispatch-a
+- file: 01-workshop-pypsa-intro
+- file: 02-workshop-pypsa-more-features
+- file: annex-python
+- file: annex-pandas
