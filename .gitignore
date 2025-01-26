@@ -10,3 +10,4 @@ workshop-pypsa-transnetbw/tmp/
 workshop-pypsa-transnetbw/_build/
 workshop-pypsa-transnetbw/tmp.csv
 workshop-pypsa-transnetbw/data
+data/

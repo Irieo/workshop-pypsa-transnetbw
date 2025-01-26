@@ -6,5 +6,6 @@ root: intro
 chapters:
 - file: 01-workshop-pypsa-intro
 - file: 02-workshop-pypsa-more-features
+- file: 03-workshop-pypsa-sc-expansion
 - file: annex-python
 - file: annex-pandas
